@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Dentist.Models.Service>
+
+<html>
+<head>
+    <title>Dentist</title>
+</head>
+<body>
+
+    <ul>
+        @foreach (var listService in Model)
+        {
+            <li><h2>@Html.DisplayFor(modelItem => listService.Description)</h2> @Html.ActionLink("Details", "Details", new { id = listService.ServiceId })</li>
+        }
+    </ul>
+
+   
+
+
+
+</body>
+
+
+</html>
